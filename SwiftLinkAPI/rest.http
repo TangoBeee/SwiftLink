@@ -1,0 +1,16 @@
+### Creating a short URL
+POST  http://localhost:3000/url
+Content-Type: application/json
+
+{
+    "url": "https://example.com"
+}
+
+### Get URL Analytics
+GET http://localhost:3000/url/analytics/xlabAYT3
+
+### Get redirect URL Info
+GET http://localhost:3000/xlabAYT3+
+
+### Testing ShortID
+GET http://localhost:3000/xlabAYT3
