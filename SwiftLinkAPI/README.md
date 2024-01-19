@@ -41,7 +41,7 @@ On Linux:
 * Create a `.env` file.
 * Add your port number where server will run.
 * Add the length of your ShortID that you want to generate for your users.
-* Add your `MongoDB Atlas` credentials in `"mongoURI"` field.
+* Add your `MongoDB Atlas` connection url in `MONGODB_CONNECTION_URL` field.
 ```
 PORT = 1234
 SHORT_ID_LEN = 5
