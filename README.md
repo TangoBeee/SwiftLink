@@ -36,7 +36,7 @@ Users should be able to:
 
 ### Screenshot
 
-![SwiftLink]()
+![SwiftLink](assets/screenshots/swiftlink-home.png)
 
 ### Links
 * [Live URL]()
