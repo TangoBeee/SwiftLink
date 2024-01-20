@@ -5,6 +5,7 @@ export const HomeContainer = styled.main`
     justify-content: center;
     align-items: center;
     width: 100vw;
+    padding-block: 20px;
 
     .home-content {
         display: flex;
@@ -76,7 +77,7 @@ export const HomeContainer = styled.main`
             h2 {
                 font-size: 20px;
                 line-height: 28px;
-                text-align: start;
+                text-align: center;
                 font-weight: 500;
                 color: #4b5563;
                 margin-top: 24px;
@@ -144,6 +145,55 @@ export const HomeContainer = styled.main`
 
                     &:hover {
                         background-color: #d7dabf;
+                    }
+                }
+            }
+        }
+    }
+
+
+    @media (max-width: ${(props) => props.theme.smallDesktop.width}) {
+        flex-direction: column;
+        gap: 60px;
+
+        .home-content {
+            .content {
+                align-items: center;
+                text-align: center;
+                margin-left: 0px;
+            }
+        }
+
+        .form-content-wrapper {
+            .form-content {
+                margin-right: 0px;
+            }
+        }
+    }
+
+    @media (max-width: ${(props) => props.theme.mobile.width}) {
+        .home-content {
+            .content {
+                p {
+                    width: 70%;
+                }
+            }
+            width: 100%;
+        }
+
+        .form-content-wrapper {
+            width: 100%;
+
+            .form-content {
+                width: 80%;
+
+                form {
+                    .input-wrapper {
+                        width: 100%;
+                    }
+
+                    button {
+                        width: 100%;
                     }
                 }
             }
