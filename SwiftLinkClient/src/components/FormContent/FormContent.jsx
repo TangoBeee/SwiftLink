@@ -1,12 +1,13 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { FormContentContainer } from './FormContent.styled'
-
 import Logo from '../../assets/logo-black.png'
 import Form from '../Form/Form'
 import { ThemeProvider } from 'styled-components'
 import { responsiveTheme } from '../../constants/styled-constants'
+import ShortURLResult from '../ShortURLResult/ShortURLResult'
 
 const FormContent = () => {
+  const [showResult, setShowResult] = useState(false)
 
   return (
     <ThemeProvider theme={ responsiveTheme }>
@@ -18,7 +19,9 @@ const FormContent = () => {
 
                 <h2>Abracadabra, make me a magic link!</h2>
 
-                <Form />
+                <Form setShowResult={setShowResult} />
+
+                { showResult ? <ShortURLResult /> : "" }
             </div>
         </FormContentContainer>
     </ThemeProvider>

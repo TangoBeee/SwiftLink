@@ -6,10 +6,11 @@ export const FormContentContainer = styled.div`
     justify-content: center;
     align-items: center;
     width: 50%;
+    height: fit-content;
 
     .form-content {
         width: 560px;
-        height: 386px;
+        height: 100%;
         padding: 48px 32px;
         display: flex;
         flex-direction: column;
@@ -69,27 +70,6 @@ export const FormContentContainer = styled.div`
                 img {
                     width: 30px;
                     height: 30px;
-                }
-            }
-
-            h2 {
-                font-size: 16px;
-                line-height: 20px;
-            }
-
-            form {
-                .input-wrapper {
-                    margin-top: 30px;
-                    width: 100%;
-
-                    p.input-error {
-                        font-size: 10px;
-                        line-height: normal;
-                    }
-                }
-
-                button {
-                    width: 100%;
                 }
             }
         }
