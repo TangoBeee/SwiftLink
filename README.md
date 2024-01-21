@@ -41,7 +41,16 @@ Users should be able to:
 
 ### Demo
 
-* GIF: ![SwiftLink](assets/demo/swiftlink-demo.gif)
+<ul>
+<li>
+<details>
+<summary>GIF</summary>
+
+![SwiftLink](assets/demo/swiftlink-demo.gif)
+</details>
+</li>
+</ul>
+
 * [Live URL](https://tangobeee.github.io/SwiftLink/) - *Coming Soon*
 * [Source Code](https://github.com/TangoBee/SwiftLink)
 
