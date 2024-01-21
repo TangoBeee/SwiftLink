@@ -11,6 +11,9 @@ const URLInput = ({ inputRef, value, setUrlInput, onChange, isError }) => {
     .then(text => {
         setUrlInput(text)
     })
+    .catch(error => {
+        setUrlInput("Clipboard read permission denied")
+    })
   }
 
   return (
