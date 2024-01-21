@@ -233,7 +233,7 @@ Error generating stack: `+o.message+`
             }
         }
     }
-`,$m="/SwiftLinkClient/assets/logo-black-HLRvVZYk.png",jm=Ot.div`
+`,$m=""+new URL("logo-black-HLRvVZYk.png",import.meta.url).href,jm=Ot.div`
     width: 496px;
     margin-top: 40px;
     position: relative;
