@@ -27,12 +27,17 @@ SwiftLink is a service that allows users to create short and easy-to-share URLs 
 ### Features 
 Users should be able to:
 
-- View the optimal layout for the site depending on their device's screen size
-- Shorten any valid URL
-- See the analytics of the shortened url.
-- Can preview the redirect url by just adding `+` symbol after the shortId (i.e. domain.com/xjD7kdLp+).
-- Copy the shortened link to their clipboard in a single click
-- Receive an error message when the `input` is invalid
+- [x] View the optimal layout for the site depending on their device's screen size
+- [x] Shorten any valid URL
+- [x] See the analytics of the shortened url.
+- [x] Can preview the redirect url by just adding `+` symbol after the shortId (i.e. domain.com/xjD7kdLp+).
+- [x] Copy the shortened link to their clipboard in a single click
+- [x] Receive an error message when the `input` is invalid
+- [ ] Can make custom short url.
+- [ ] Can set passwords for short URLs
+- [ ] Ability to shorten multiple URLs simultaneously.
+- [ ] Integration with social media platforms for easy sharing.
+- [ ] QR codes for short URLs
 
 ### Demo
 
