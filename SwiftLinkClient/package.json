@@ -2,13 +2,16 @@
   "name": "swiftlinkclient",
   "version": "1.0.0",
   "type": "module",
+  "homepage": "https://tangobeee.github.io/SwiftLink",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "deploy": "gh-pages -d build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
   },
   "dependencies": {
+    "gh-pages": "^6.1.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "styled-components": "^6.1.8"
