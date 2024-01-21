@@ -9,7 +9,7 @@
 [![Languages](https://img.shields.io/github/languages/count/TangoBeee/SwiftLink?style=for-the-badge)](https://github.com/TangoBeee/SwiftLink)
 [![Top](https://img.shields.io/github/languages/top/TangoBeee/SwiftLink?style=for-the-badge&label=Top%20Languages)](https://github.com/TangoBeee/SwiftLink)
 [![Issues](https://img.shields.io/github/issues/TangoBeee/SwiftLink?style=for-the-badge&label=Issues)](https://github.com/TangoBeee/SwiftLink/issues)
-[![Watchers](	https://img.shields.io/github/watchers/TangoBeee/SwiftLink?label=Watch&style=for-the-badge)](https://github.com/TangoBeee/SwiftLink/) 
+[![Watchers](https://img.shields.io/github/watchers/TangoBeee/SwiftLink?label=Watch&style=for-the-badge)](https://github.com/TangoBeee/SwiftLink/watchers) 
 
 <h3 align="center">This is a fullstack url shortening project build with reactjs and expressjs/nodejs</h3>
 
@@ -18,6 +18,8 @@
         <img src="assets/SwiftLink%20Banner.png" alt="SwiftLink Banner"/>
     </a>
 </p>
+
+[![Deploy status](https://github.com/tangobeee/swiftlink/actions/workflows/node.js.yml/badge.svg)](https://github.com/TangoBeee/SwiftLink/actions)
 
 ## Description
 SwiftLink is a service that allows users to create short and easy-to-share URLs from long and complex ones. It is built with React.js for the frontend and ExpressJS/NodeJS for the backend. It also uses MongoDB as a database service to store the URL mappings and visitors analytics.
