@@ -33,14 +33,35 @@ const Form = ({ setShowResult, setShortUrl }) => {
       formRef.current.style.pointerEvents = "none"
       formInputRef.current.setAttribute('disabled', 'true')
       setShowResult(false)
-  
-      setTimeout(() => {
-          setFormButtonText(defaultFormButtonText)
-          formRef.current.style.pointerEvents = "auto"
-          formInputRef.current.removeAttribute('disabled')
-          setShowResult(true)
-          setShortUrl("https://localhost:5000/hi8DkPp0")
-      }, 3000)
+      
+      callShortURLAPI()
+    }
+
+    const callShortURLAPI = async () => {
+        await fetch(`${import.meta.env.VITE_SERVER_BASE_URL}/url`, {
+            method: 'post',
+            headers: {'Content-Type':'application/json'},
+            body: JSON.stringify({"url": urlInput})
+        }).then(res => res.json())
+        .then(res => {
+            if(res.ok) {
+                const resShortID = res.id;
+                setFormButtonText(defaultFormButtonText)
+                formRef.current.style.pointerEvents = "auto"
+                formInputRef.current.removeAttribute('disabled')
+                setShowResult(true)
+                setShortUrl(`${import.meta.env.VITE_SERVER_BASE_URL}/${resShortID}`)
+            } else {
+                setFormButtonText(defaultFormButtonText)
+                formRef.current.style.pointerEvents = "auto"
+                formInputRef.current.removeAttribute('disabled')
+                setShowResult(true)
+                setShortUrl("Something went wrong!")
+            }
+        })
+        .catch((error) => {
+            console.log(error.message)
+        })
     }
   
 
