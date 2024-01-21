@@ -2,7 +2,7 @@
   "name": "swiftlinkclient",
   "version": "1.0.0",
   "type": "module",
-  "homepage": "https://tangobeee.github.io/SwiftLink/SwiftLinkClient"
+  "homepage": "https://tangobeee.github.io/SwiftLink/SwiftLinkClient",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
