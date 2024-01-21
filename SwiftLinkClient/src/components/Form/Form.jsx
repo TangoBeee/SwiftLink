@@ -2,6 +2,7 @@ import React, { useRef, useState } from 'react'
 import URLInput from '../URLInput/URLInput';
 import { FormContainer } from './Form.styled';
 import Button from '../Button/Button';
+import { SERVER_BASE_URL } from '../../constants/config';
 
 const Form = ({ setShowResult, setShortUrl }) => {
     const defaultFormButtonText = "Shorten it"
@@ -38,7 +39,7 @@ const Form = ({ setShowResult, setShortUrl }) => {
     }
 
     const callShortURLAPI = async () => {
-        await fetch(`${import.meta.env.VITE_SERVER_BASE_URL}/url`, {
+        await fetch(`${SERVER_BASE_URL}/url`, {
             method: 'post',
             headers: {'Content-Type':'application/json'},
             body: JSON.stringify({"url": urlInput})
@@ -50,7 +51,7 @@ const Form = ({ setShowResult, setShortUrl }) => {
                 formRef.current.style.pointerEvents = "auto"
                 formInputRef.current.removeAttribute('disabled')
                 setShowResult(true)
-                setShortUrl(`${import.meta.env.VITE_SERVER_BASE_URL}/${resShortID}`)
+                setShortUrl(`${SERVER_BASE_URL}/${resShortID}`)
             } else {
                 setFormButtonText(defaultFormButtonText)
                 formRef.current.style.pointerEvents = "auto"
