@@ -1,0 +1,11 @@
+{
+  "name": "swiftlink",
+  "version": "1.0.0",
+  "description": "Make your big URL short",
+  "scripts": {
+    "start": "cd SwiftLinkAPI && npm run dev",
+    "build": "cd SwiftLinkAPI && npm install  && cd ../SwiftLinkClient && npm install && npm run build"
+  },
+  "author": "TangoBee",
+  "license": "MIT"
+}
