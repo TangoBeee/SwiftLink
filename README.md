@@ -34,13 +34,11 @@ Users should be able to:
 - Copy the shortened link to their clipboard in a single click
 - Receive an error message when the `input` is invalid
 
-### Screenshot
+### Demo
 
-![SwiftLink](assets/screenshots/swiftlink-home.png)
-
-### Links
-* [Live URL]()
-* [Solution](https://github.com/TangoBee/SwiftLink)
+* GIF: ![SwiftLink](assets/demo/swiftlink-demo.gif)
+* [Live URL]() - *Coming Soon*
+* [Source Code](https://github.com/TangoBee/SwiftLink)
 
 ## My process
 
