@@ -49,6 +49,7 @@ const Form = ({ setShowResult, setShortUrl }) => {
       <URLInput
         inputRef={formInputRef}
         value={urlInput}
+        setUrlInput={setUrlInput}
         onChange={onUrlInputChangeHandler}
         isError={urlInput && !urlRegex.test(urlInput)}
       />
