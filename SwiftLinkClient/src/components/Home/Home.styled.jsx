@@ -24,7 +24,7 @@ export const HomeContainer = styled.main`
             gap: 16px;
 
             h1 {
-                font-size: 48px;
+                font-size: 50px;
                 line-height: 48px;
                 font-weight: 500;
                 color: #374151;
@@ -127,6 +127,18 @@ export const HomeContainer = styled.main`
                             height: 28px;
                         }
                     }
+
+                    p {
+                        display: none;
+
+                        &.input-error {
+                            display: block;
+                            font-size: 12px;
+                            line-height: 16px;
+                            color: #e11d48;
+                            margin-top: 4px;
+                        }
+                    }
                 }
 
                 button {
@@ -145,6 +157,12 @@ export const HomeContainer = styled.main`
 
                     &:hover {
                         background-color: #d7dabf;
+                    }
+                    
+                    &:disabled {
+                        background-color: #e5e8d0;
+                        opacity: 0.5;
+                        cursor: not-allowed;
                     }
                 }
             }
@@ -172,9 +190,21 @@ export const HomeContainer = styled.main`
     }
 
     @media (max-width: ${(props) => props.theme.mobile.width}) {
+        gap: 30px;
+
         .home-content {
             .content {
+                h1 {
+                    font-size: 30px;
+                    line-height: 40px;
+
+                    span {
+                        display: block;
+                    }
+                }
                 p {
+                    font-size: 16px;
+                    line-height: 24px;
                     width: 70%;
                 }
             }
@@ -186,10 +216,33 @@ export const HomeContainer = styled.main`
 
             .form-content {
                 width: 80%;
+                padding: 40px 24px;
+
+                .form-logo-wrapper {
+                    width: 70px;
+                    height: 70px;
+                    padding: 20px;
+                    
+                    img {
+                        width: 30px;
+                        height: 30px;
+                    }
+                }
+
+                h2 {
+                    font-size: 16px;
+                    line-height: 20px;
+                }
 
                 form {
                     .input-wrapper {
+                        margin-top: 30px;
                         width: 100%;
+
+                        p.input-error {
+                            font-size: 10px;
+                            line-height: normal;
+                        }
                     }
 
                     button {
