@@ -3,7 +3,7 @@ import URLInput from '../URLInput/URLInput';
 import { FormContainer } from './Form.styled';
 import Button from '../Button/Button';
 
-const Form = ({ setShowResult }) => {
+const Form = ({ setShowResult, setShortUrl }) => {
     const defaultFormButtonText = "Shorten it"
   
     const [urlInput, setUrlInput] = useState("")
@@ -27,6 +27,8 @@ const Form = ({ setShowResult }) => {
   
     const onSubmitHandler = (event) => {
       event.preventDefault()
+      const userUrl = event.target[0].value
+
       setFormButtonText("Shortening...")
       formRef.current.style.pointerEvents = "none"
       formInputRef.current.setAttribute('disabled', 'true')
@@ -35,8 +37,9 @@ const Form = ({ setShowResult }) => {
       setTimeout(() => {
           setFormButtonText(defaultFormButtonText)
           formRef.current.style.pointerEvents = "auto"
-          setShowResult(true)
           formInputRef.current.removeAttribute('disabled')
+          setShowResult(true)
+          setShortUrl("https://localhost:5000/hi8DkPp0")
       }, 3000)
     }
   

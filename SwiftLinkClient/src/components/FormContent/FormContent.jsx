@@ -8,6 +8,7 @@ import ShortURLResult from '../ShortURLResult/ShortURLResult'
 
 const FormContent = () => {
   const [showResult, setShowResult] = useState(false)
+  const [shortUrl, setShortUrl] = useState("")
 
   return (
     <ThemeProvider theme={ responsiveTheme }>
@@ -19,9 +20,9 @@ const FormContent = () => {
 
                 <h2>Abracadabra, make me a magic link!</h2>
 
-                <Form setShowResult={setShowResult} />
+                <Form setShowResult={setShowResult} setShortUrl={setShortUrl} />
 
-                { showResult ? <ShortURLResult /> : "" }
+                { showResult ? <ShortURLResult shortUrl={shortUrl} /> : "" }
             </div>
         </FormContentContainer>
     </ThemeProvider>
