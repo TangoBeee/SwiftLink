@@ -16,7 +16,7 @@ app.use(cors());
 app.use(express.json());
 
 // Trust the hops in the X-Forwarded-For header
-app.set("trust proxy", true);
+// app.set("trust proxy", true);
 
 // Using requestIp lib to get IP from behind the proxy
 app.use(requestIp.mw())
