@@ -16,8 +16,6 @@ const handleRedirectURLViewer = async (req, res) => {
   const visitorIP = req.clientIp;
 
   const geoData = geoip.lookup(visitorIP);
-  
-  console.log(req.clientIp);
 
   const { country, region, city, timezone } = geoData;
   // Fetch and Update the URL analytics.
