@@ -13,13 +13,13 @@ const handleRedirectURLViewer = async (req, res) => {
       : paramShortId;
 
   // Get the info of the current visitor for analytics.
-  let visitorIP = "1.1.1.1";
-  await fetch("https://ipinfo.io/ip")
-  .then(res => res.text())
-  .then(res => visitorIP = res);
-  
-  const { country, region, city, timezone } = geoip.lookup(visitorIP);
+  const visitorIP = req.clientIp;
 
+  const geoData = geoip.lookup(visitorIP);
+  
+  console.log(req.clientIp);
+
+  const { country, region, city, timezone } = geoData;
   // Fetch and Update the URL analytics.
   const urlResult = await urlModel.findOneAndUpdate(
     { shortId },

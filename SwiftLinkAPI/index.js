@@ -1,21 +1,26 @@
 const express = require("express");
 const dotenv = require("dotenv");
 const cors = require("cors");
+const requestIp = require('request-ip');
 
 const urlRouter = require("./routes/URL.route");
 const urlRedirectRouter = require("./routes/RedirectURLViewer.route");
 const dbConnect = require("./utils/dbConnect");
 const httpStatusCodes = require("./constants/httpStatusCodes");
+const { corsOptions } = require("./middleware/crosOptions");
 
 dotenv.config();
 const app = express();
 
 // Enable CORS for all origins
-app.use(cors());
+app.use(cors(corsOptions));
 app.use(express.json());
 
-// Trust the first hop in the X-Forwarded-For header
-app.set("trust proxy", 1);
+// Trust the hops in the X-Forwarded-For header
+app.set("trust proxy", true);
+
+// Using requestIp lib to get IP from behind the proxy
+app.use(requestIp.mw())
 
 // Create Short URL ID
 app.use("/url", urlRouter);
