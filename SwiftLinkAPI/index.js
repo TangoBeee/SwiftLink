@@ -7,13 +7,12 @@ const urlRouter = require("./routes/URL.route");
 const urlRedirectRouter = require("./routes/RedirectURLViewer.route");
 const dbConnect = require("./utils/dbConnect");
 const httpStatusCodes = require("./constants/httpStatusCodes");
-const { corsOptions } = require("./middleware/crosOptions");
 
 dotenv.config();
 const app = express();
 
 // Enable CORS for all origins
-app.use(cors(corsOptions));
+app.use(cors());
 app.use(express.json());
 
 // Trust the hops in the X-Forwarded-For header
