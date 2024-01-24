@@ -21,18 +21,18 @@ app.use(express.json());
 // Using requestIp lib to get IP from behind the proxy
 app.use(requestIp.mw());
 
-// Create Short URL ID
-app.use("/url", urlRouter);
-
-// Find and Redirect to Original URL
-app.use("/", urlRedirectRouter);
-
 // For personal use (pinging the server at intervals of every 5 minutes to ensure 100% uptime)
 app.use("/monitor", (req, res) => {
   res.status(httpStatusCodes.OK).send({
     ok: true,
   });
 });
+
+// Create Short URL ID
+app.use("/url", urlRouter);
+
+// Find and Redirect to Original URL
+app.use("/", urlRedirectRouter);
 
 // Show an error if user trying to access a resource that doesn't exist.
 app.use((req, res) => {
