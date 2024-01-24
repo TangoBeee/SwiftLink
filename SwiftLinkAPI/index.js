@@ -1,7 +1,7 @@
 const express = require("express");
 const dotenv = require("dotenv");
 const cors = require("cors");
-const requestIp = require('request-ip');
+const requestIp = require("request-ip");
 
 const urlRouter = require("./routes/URL.route");
 const urlRedirectRouter = require("./routes/RedirectURLViewer.route");
@@ -19,13 +19,20 @@ app.use(express.json());
 // app.set("trust proxy", true);
 
 // Using requestIp lib to get IP from behind the proxy
-app.use(requestIp.mw())
+app.use(requestIp.mw());
 
 // Create Short URL ID
 app.use("/url", urlRouter);
 
 // Find and Redirect to Original URL
 app.use("/", urlRedirectRouter);
+
+// For personal use (pinging the server at intervals of every 5 minutes to ensure 100% uptime)
+app.use("/monitor", (req, res) => {
+  res.status(httpStatusCodes.OK).send({
+    ok: true,
+  });
+});
 
 // Show an error if user trying to access a resource that doesn't exist.
 app.use((req, res) => {
